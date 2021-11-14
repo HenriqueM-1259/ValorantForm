@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script href="index.js"></script>
+    <title>Document</title>
+</head>
+
+<script type="text/javascript">
+    window.onload = function(){
+       
+        mudaFoto();
+        mudaFotoPersonagem();
+        abrir();
+    }
+
+    function abrir(){
+       
+        
+    }
+
+    function mudaFoto(){
+        switch(document.getElementById('Armas').value) {
+            case '1': 
+           
+                document.getElementById('imagem-arma').src = "https://cdn.ligadosgames.com/imagens/phantom.jpg";
+            
+            break;
+            case '2': 
+            
+                document.getElementById('imagem-arma').src = "https://cdn.ligadosgames.com/imagens/vandal.jpg";
+
+            break;
+        }
+        
+    }
+    function mudaFotoPersonagem(){
+        switch(document.getElementById('Personagem').value) {
+            case '1': 
+       
+                document.getElementById('imagem-Personagem').src = "https://cdn.esports.gg/wp-content/uploads/2021/05/13133552/Sova-1-196x300.png";
+                document.getElementById('NomePersonagem').innerHTML= "Sova";
+            break;
+            case '2': 
+            
+                document.getElementById('imagem-Personagem').src = "https://cdn.esports.gg/wp-content/uploads/2021/05/13133401/Jett_1115x1296_1-881x1024.png";
+                document.getElementById('NomePersonagem').innerHTML= "Jett";
+            break;
+        }
+        
+    }
+</script>
+<body>
+    <form class="row" method="post">
+        
+        <div class="col-12 background">
+            <div class="col-12 conteudo">
+                <div class="col-7">
+                    <div class="5">
+                          
+                        <img class="Arma  mt-5" id="imagem-arma" src="teste.png" alt=""/> 
+                        <select class="Armas " name="Armas" id="Armas" onchange="return mudaFoto();">
+                            <option value="0">Escolha</option>
+                            <option value="1">Phantom</option>
+                            <option value="2">Vandal</option>
+                            
+                        </select>
+                        
+                    </div>
+                    <div>
+                        <textarea class="Txt-form mt-3" placeholder="Escreva o porque das escolhas"></textarea>
+                       
+                      
+                      
+                    </div>
+                </div>
+                <div class="col-5 ">
+                    <div class="">  
+                        <div class="NomePersonagem ">
+                            <label id="NomePersonagem" ></label>
+                        </div>  
+                        <img class="imagem-Personagem mt-5" id="imagem-Personagem" src="teste.png" alt=""/>
+                        <select class="Personagem " name="Personagem" id="Personagem" onchange="return mudaFotoPersonagem();">
+                            <option value="0">Escolha</option>
+                            <option value="1">Sova</option>
+                            <option value="2">Jett</option>
+                            <option value="3">Personagem-3</option>
+                            <option value="4">Personagem-4</option>
+                        </select>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row" id="janela" > 
+            <div class="col-12 ">
+                <div class="col-12 fundo" >
+                <div class="col-6">
+                    <input type="text" class="input1" placeholder="Nome">
+                    
+                    <input type="text" class="input3" placeholder="E-mail">
+                </div>
+                
+                   
+                <button class="Enviar">Enviar</button>
+                    
+               
+                </div>
+               
+            </div>
+        </div>
+        
+        
+    </form>
+</body>
+</html>
