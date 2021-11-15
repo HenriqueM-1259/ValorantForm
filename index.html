@@ -5,57 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script href="index.js"></script>
+    
     <title>Document</title>
 </head>
 
-<script type="text/javascript">
-    window.onload = function(){
-       
-        mudaFoto();
-        mudaFotoPersonagem();
-        abrir();
-    }
-
-    function abrir(){
-       
-        
-    }
-
-    function mudaFoto(){
-        switch(document.getElementById('Armas').value) {
-            case '1': 
-           
-                document.getElementById('imagem-arma').src = "https://cdn.ligadosgames.com/imagens/phantom.jpg";
-            
-            break;
-            case '2': 
-            
-                document.getElementById('imagem-arma').src = "https://cdn.ligadosgames.com/imagens/vandal.jpg";
-
-            break;
-        }
-        
-    }
-    function mudaFotoPersonagem(){
-        switch(document.getElementById('Personagem').value) {
-            case '1': 
-       
-                document.getElementById('imagem-Personagem').src = "https://cdn.esports.gg/wp-content/uploads/2021/05/13133552/Sova-1-196x300.png";
-                document.getElementById('NomePersonagem').innerHTML= "Sova";
-            break;
-            case '2': 
-            
-                document.getElementById('imagem-Personagem').src = "https://cdn.esports.gg/wp-content/uploads/2021/05/13133401/Jett_1115x1296_1-881x1024.png";
-                document.getElementById('NomePersonagem').innerHTML= "Jett";
-            break;
-        }
-        
-    }
+<script src="index.js"></script>
+    
 </script>
 <body>
-    <form class="row" method="post">
-        
+    <form class="row" action="https://api.staticforms.xyz/submit" method="post">
+        <input type="hidden" name="accessKey" value="cb3a670d-7ac4-4b14-9fd0-87b611c0b825">
         <div class="col-12 background">
             <div class="col-12 conteudo">
                 <div class="col-7">
@@ -71,7 +30,7 @@
                         
                     </div>
                     <div>
-                        <textarea class="Txt-form mt-3" placeholder="Escreva o porque das escolhas"></textarea>
+                        <textarea class="Txt-form mt-3" name="message" placeholder="Escreva o porque das escolhas"></textarea>
                        
                       
                       
@@ -83,12 +42,11 @@
                             <label id="NomePersonagem" ></label>
                         </div>  
                         <img class="imagem-Personagem mt-5" id="imagem-Personagem" src="teste.png" alt=""/>
-                        <select class="Personagem " name="Personagem" id="Personagem" onchange="return mudaFotoPersonagem();">
+                        <select class="Personagem " name="name" id="Personagem" onchange="return mudaFotoPersonagem();">
                             <option value="0">Escolha</option>
-                            <option value="1">Sova</option>
-                            <option value="2">Jett</option>
-                            <option value="3">Personagem-3</option>
-                            <option value="4">Personagem-4</option>
+                            <option value="Sova">Sova</option>
+                            <option value="Jett">Jett</option>
+                            
                         </select>
                         
                     </div>
@@ -100,13 +58,13 @@
             <div class="col-12 ">
                 <div class="col-12 fundo" >
                 <div class="col-6">
-                    <input type="text" class="input1" placeholder="Nome">
+                    <input type="text" class="input1" name="name" placeholder="Nome">
                     
-                    <input type="text" class="input3" placeholder="E-mail">
+                    <input type="text" class="input3" name="email" placeholder="E-mail">
                 </div>
                 
-                   
-                <button class="Enviar">Enviar</button>
+                <input type="hidden" name="redirectTo" value="#">
+                <button type="submit" value="Submit" class="Enviar">Enviar</button>
                     
                
                 </div>
